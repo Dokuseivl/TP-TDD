@@ -1,12 +1,9 @@
-def affiche():
+def affiche(n=100):
     """
-    Affiche les nombres de 1 à 100 en remplaçant :
-    - les multiples de 3 par 'Fizz'
-    - les multiples de 5 par 'Buzz'
-    - les multiples de 15 par 'FrisBee'
+    Même principe que précédemment, mais jusqu’à n.
     """
     result = ""
-    for i in range(1, 101):
+    for i in range(1, n + 1):
         if i % 15 == 0:
             result += "FrisBee"
         elif i % 3 == 0:
