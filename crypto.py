@@ -1,13 +1,15 @@
-def crypt(message, pas=1):
+def decrypt(message):
     """
-    Décale chaque caractère de 'pas' positions et ajoute le pas à la fin du message.
+    Déchiffre le message crypté en utilisant le pas à la fin de la chaîne.
     """
+    pas = int(message[-1])
+    message = message[:-1]
     result = ""
     for c in message:
         if c in caracteres:
             index = caracteres.index(c)
-            result += caracteres[(index + pas) % len(caracteres)]
+            result += caracteres[(index - pas) % len(caracteres)]
         else:
             result += c
-    result += str(pas)
     return result
+
