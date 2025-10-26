@@ -1,9 +1,9 @@
-def affiche(n=100):
+def affiche(n1=1, n2=100):
     """
-    Même principe que précédemment, mais jusqu’à n.
+    Version finale : affiche les nombres de n1 à n2 inclus.
     """
     result = ""
-    for i in range(1, n + 1):
+    for i in range(n1, n2 + 1):
         if i % 15 == 0:
             result += "FrisBee"
         elif i % 3 == 0:
