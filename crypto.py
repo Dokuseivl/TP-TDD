@@ -1,15 +1,13 @@
-import string
-caracteres = string.ascii_letters + string.punctuation + string.digits + " "
-
-def crypt(message):
+def crypt(message, pas=1):
     """
-    Décale chaque caractère d'une position dans la table 'caracteres'.
+    DÃ©cale chaque caractÃ¨re de 'pas' positions et ajoute le pas Ã  la fin du message.
     """
     result = ""
     for c in message:
         if c in caracteres:
             index = caracteres.index(c)
-            result += caracteres[(index + 1) % len(caracteres)]
+            result += caracteres[(index + pas) % len(caracteres)]
         else:
             result += c
+    result += str(pas)
     return result
