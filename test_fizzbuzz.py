@@ -1,5 +1,5 @@
 import pytest
-from src.fizzbuzz import affiche
+from fizzbuzz import affiche
 
 def test_affiche_sans_parametre():
     """
